@@ -1,0 +1,79 @@
+<!---  Header ---> 
+<!DOCTYPE html> 
+<html>  
+<head>   
+<title>Bon de connexion</title>   
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="pragma" content="no-cache" />      
+   <style>    
+	body {     
+		   color: #000000;     
+		   background-color: #FFFFFF;     
+		   font-size: 12px;     font-family:  'Helvetica', arial, sans-serif;     
+		   margin: 0px;     -webkit-print-color-adjust: exact;    
+	   }    
+	   table.voucher {     
+		   display: inline-block;     
+		   border: 2px solid black;     
+		   margin: 2px;    
+	   }    
+	   @page    {
+		   width: 210mm;     
+		   height: 297mm;     
+		   display: flex;             
+		   flex-direction: column;     
+		   margin-left: 7mm;     
+		   margin-right: 3mm;     
+		   margin-top: 9mm;     
+		   margin-bottom: 3mm;         
+	   }    
+	   @media print    {     
+	   table { page-break-after:auto }     
+				tr    { page-break-inside:avoid; page-break-after:auto }     
+				td    { page-break-inside:avoid; page-break-after:auto }     
+				thead { display:table-header-group }     
+				tfoot { display:table-footer-group }    }    
+		.num {     float:right;     
+			display:inline-block;    
+			}    
+		.up {         
+			letter-spacing: 2px;       
+		}        
+</style>  
+</head>  
+<body> 
+<!---  End Header --->
+
+<!---  Start  Raw --->  
+<table class="voucher" style=" width: 140px; text-align: center;">   
+<thead>     
+<tr>      
+<th colspan="2" style="width:100%;text-align: center; font-size: 12px; font-weight:bold; border-bottom: 1px black solid;">
+ SSID: AZIZ ETESS Wifi <br />  address: azizetess.wifi  
+ </th>  
+ </tr>    
+ </thead>    
+ <tbody>     
+ <tr style="color: black; font-size: 10px; text-align: center;">      
+ <td class="up">Identifients </td>  
+ </tr>    
+ <tr style="color: black; font-size: 12px; text-align: center;">      
+ <td class="up" style="border: 1px solid black;">%u_username%</td>     
+ </tr>    
+ </tbody>    
+ <tfoot>     
+ <tr style="color: black; font-size: 10px; text-align: center;">      
+ <th colspan="2" >  
+ <span class="validity">Validité : </span>       
+ <span class="timelimit" style="border: 1px solid black;">%u_limitUptime%</span>  
+ </tr>    
+ </tfoot>   
+ </table>   
+ 
+<!---  End Raw --->
+
+<!---  Start Footer --->  
+
+</body> 
+</html>  
+<!--   End Footer  --->

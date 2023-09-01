@@ -1,0 +1,90 @@
+<!---  Header --->
+ <!DOCTYPE html>
+ <html>  
+ <head>   
+<title>Bon de connexion</title>   
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+<meta http-equiv="pragma" content="no-cache" />      
+<style>    
+body {     
+	color: #000000;     
+	background-color: #FFFFFF;     
+	font-size: 12px;     
+	font-family:  'Helvetica', arial, sans-serif;     
+	margin: 0px;     -webkit-print-color-adjust: exact;    
+	}        
+table.ticket {        
+			display: inline-block;        
+			margin: 2px;        width: 140;        
+			text-align: center;        
+			background-color: #f0f0f0;        
+			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);    
+			}    
+@page    {        
+			width: 210mm;     height: 297mm;     
+			display: flex;             
+			flex-direction: column;     
+			margin-left: 7mm;     
+			margin-right: 3mm;     
+			margin-top: 9mm;     
+			margin-bottom: 3mm;         
+			}    
+@media print    {     
+table { page-break-after:auto}     
+	tr   { page-break-inside:avoid; page-break-after:auto }     
+	td    { page-break-inside:avoid; page-break-after:auto }     
+	thead { display:table-header-group }     
+	tfoot { display:table-footer-group }    }    
+.num {     float:right;     display:inline-block;    }   
+.up {         letter-spacing: 2px;  }    
+.limite {    
+		font-family: arial;    
+		font-size: 8px;    
+		margin: 4px;
+		letter-spacing: 2px;
+		
+		}        
+</style>  
+</head>  
+<body> 
+<!---  End Header --->
+
+
+<!---  Start  Raw --->
+ <table class="ticket"> 
+ <thead>   <tr>    
+ <th colspan="2" style="width:100%;text-align: center; font-size: 12px;      
+ font-weight:bold; border-bottom: 1px black solid;">
+ <p>SSID: AZIZ ETESS WIFI </p>
+ <p>Login page: azizetess.wifi </p>
+ </th>
+ </tr>  </thead>  
+ <tbody>   <tr style="color: black; font-size: 10px; text-align: center;">    
+ <td style="border: 1px solid black;">Nom d'utilisateur
+ <p style="letter-spacing: 1px;">%u_username%</p>
+ </td>
+ <td style="border: 1px solid black;">Mot de passe
+<p style="letter-spacing: 1px;">%u_password%</p>
+ </td>
+ </tr>   
+  
+ </tbody>  
+ <tfoot>   
+ <tr style="color: black; font-size: 10px; text-align: center;">    
+ <th colspan="2" >
+ <span class="validity">Validité : </span>     
+ <span class="limite">%u_limitUptime%</span>
+ </tr>  
+ </tfoot> 
+ </table> 
+
+<!---  End Raw --->
+
+
+
+<!---  Start Footer --->
+
+</body>
+</html>
+
+<!--   End Footer  --->
